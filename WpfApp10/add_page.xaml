@@ -1,0 +1,28 @@
+﻿<Page x:Class="WpfApp10.add_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp10"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="add_page">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="download.jpeg"/>
+        </Grid.Background>
+        <Label Content="data" Height="50" FontSize="36" Margin="340,27,372,373"/>
+        <Label Content="name " Height="50" FontSize="24" Margin="193,175,534,225"/>
+        <Label Content="password" Height="50" FontSize="24" Margin="154,214,534,186"/>
+        <Label Content="email " Height="50" FontSize="24" Margin="195,251,534,149"/>
+        <Label Content="address " Height="50" FontSize="24" Margin="172,290,534,110"/>
+        <Label Content="sbli" Height="50" FontSize="24" Margin="214,329,534,71"/>
+        <TextBox x:Name="n_tx" HorizontalAlignment="Left" Margin="306,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157" Background="White"/>
+        <TextBox x:Name="p_tx" HorizontalAlignment="Left" Margin="305,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" Background="White"/>
+        <TextBox x:Name="em_tx" HorizontalAlignment="Left" Margin="304,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157" Background="White"/>
+        <TextBox x:Name="ad_tx" HorizontalAlignment="Left" Margin="306,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157" Background="White"/>
+        <TextBox x:Name="sb_tx" HorizontalAlignment="Left" Margin="305,354,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157" Background="White"/>
+        <Button Content="save" HorizontalAlignment="Left" Margin="340,391,0,0" VerticalAlignment="Top" Width="60" Background="{x:Null}" Click="Button_Click" />
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ylahweeeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="specilaztion" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="names" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="passwordd" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="40" />
+    <Property Name="addresss" Type="nvarchar" MaxLength="30" />
+    <Property Name="age" Type="int" />
+    <Property Name="depId" Type="int" />
+  </EntityType>
+  <Association Name="FK__student__depId__3A81B327">
+    <End Role="department" Type="Self.department" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="depId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ylahweeeeModelStoreContainer">
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__student__depId__3A81B327" Association="Self.FK__student__depId__3A81B327">
+      <End Role="department" EntitySet="department" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
