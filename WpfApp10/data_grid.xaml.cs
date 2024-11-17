@@ -40,7 +40,7 @@ namespace WpfApp10
           
             else 
             {
-                MessageBox.Show("no data fe el data_base");
+                MessageBox.Show("no data fe el ");
             
             }
         }
